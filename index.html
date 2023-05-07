@@ -1,0 +1,1276 @@
+<!DOCTYPE html>
+<html lang="en" class="dark-mode">
+  <head>
+    <meta charset="utf-8">
+    <title>Quartz Advisers | Financial Consulting Landing</title>
+
+    <!-- SEO Meta Tags -->
+    <meta name="description" content="Quartz Advisers - Multipurpose Technology Bootstrap Template">
+    <meta name="keywords" content="bootstrap, business, creative agency, mobile app showcase, saas, fintech, finance, online courses, software, medical, conference landing, services, e-commerce, shopping cart, multipurpose, shop, ui kit, marketing, seo, landing, blog, portfolio, html5, css3, javascript, gallery, slider, touch, creative">
+    <meta name="author" content="Createx Studio">
+
+    <!-- Viewport -->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Favicon and Touch Icons -->
+    <link rel="apple-touch-icon" sizes="180x180" href="assets/favicon/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="assets/favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="assets/favicon/favicon-16x16.png">
+    <link rel="manifest" href="assets/favicon/site.webmanifest">
+    <link rel="mask-icon" href="assets/favicon/safari-pinned-tab.svg" color="#6366f1">
+    <link rel="shortcut icon" href="assets/favicon/favicon.ico">
+    <meta name="msapplication-TileColor" content="#080032">
+    <meta name="msapplication-config" content="assets/favicon/browserconfig.xml">
+    <meta name="theme-color" content="#ffffff">
+
+    <!-- Vendor Styles -->
+    <link rel="stylesheet" media="screen" href="assets/vendor/boxicons/css/boxicons.min.css"/>
+    <link rel="stylesheet" media="screen" href="assets/vendor/swiper/swiper-bundle.min.css"/>
+
+    <!-- Main Theme Styles + Bootstrap -->
+    <link rel="stylesheet" media="screen" href="assets/css/theme.min.css">
+
+    <!-- Page loading styles -->
+    <style>
+      .page-loading {
+        position: fixed;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        -webkit-transition: all .4s .2s ease-in-out;
+        transition: all .4s .2s ease-in-out;
+        background-color: #fff;
+        opacity: 0;
+        visibility: hidden;
+        z-index: 9999;
+      }
+      .dark-mode .page-loading {
+        background-color: #0b0f19;
+      }
+      .page-loading.active {
+        opacity: 1;
+        visibility: visible;
+      }
+      .page-loading-inner {
+        position: absolute;
+        top: 50%;
+        left: 0;
+        width: 100%;
+        text-align: center;
+        -webkit-transform: translateY(-50%);
+        transform: translateY(-50%);
+        -webkit-transition: opacity .2s ease-in-out;
+        transition: opacity .2s ease-in-out;
+        opacity: 0;
+      }
+      .page-loading.active > .page-loading-inner {
+        opacity: 1;
+      }
+      .page-loading-inner > span {
+        display: block;
+        font-size: 1rem;
+        font-weight: normal;
+        color: #9397ad;
+      }
+      .dark-mode .page-loading-inner > span {
+        color: #fff;
+        opacity: .6;
+      }
+      .page-spinner {
+        display: inline-block;
+        width: 2.75rem;
+        height: 2.75rem;
+        margin-bottom: .75rem;
+        vertical-align: text-bottom;
+        border: .15em solid #b4b7c9;
+        border-right-color: transparent;
+        border-radius: 50%;
+        -webkit-animation: spinner .75s linear infinite;
+        animation: spinner .75s linear infinite;
+      }
+      .dark-mode .page-spinner {
+        border-color: rgba(255,255,255,.4);
+        border-right-color: transparent;
+      }
+      @-webkit-keyframes spinner {
+        100% {
+          -webkit-transform: rotate(360deg);
+          transform: rotate(360deg);
+        }
+      }
+      @keyframes spinner {
+        100% {
+          -webkit-transform: rotate(360deg);
+          transform: rotate(360deg);
+        }
+      }
+    </style>
+
+    <!-- Theme mode -->
+    <script>
+      let mode = window.localStorage.getItem('mode'),
+          root = document.getElementsByTagName('html')[0];
+      if (mode !== null && mode === 'dark') {
+        root.classList.add('dark-mode');
+      } else {
+        root.classList.remove('dark-mode');
+      }
+    </script>
+
+    <!-- Page loading scripts -->
+    <script>
+      (function () {
+        window.onload = function () {
+          const preloader = document.querySelector('.page-loading');
+          preloader.classList.remove('active');
+          setTimeout(function () {
+            preloader.remove();
+          }, 1000);
+        };
+      })();
+    </script>
+  </head>
+
+
+  <!-- Body -->
+  <body>
+
+    <!-- Page loading spinner -->
+    <div class="page-loading active">
+      <div class="page-loading-inner">
+        <div class="page-spinner"></div><span>Loading...</span>
+      </div>
+    </div>
+
+    <!-- Page wrapper for sticky footer -->
+    <!-- Wraps everything except footer to push footer to the bottom of the page if there is little content -->
+    <main class="page-wrapper">
+
+
+      <!-- Navbar -->
+      <!-- Remove "navbar-sticky" class to make navigation bar scrollable with the page -->
+      <header class="header navbar navbar-expand-lg bg-light navbar-sticky">
+        <div class="container px-3">
+          <a href="index.html" class="navbar-brand pe-3">
+            <img src="assets/img/logo.svg" width="47" alt="Quartz Advisers">
+            Quartz Advisers
+          </a>
+          <div id="navbarNav" class="offcanvas offcanvas-end">
+            <div class="offcanvas-header border-bottom">
+              <h5 class="offcanvas-title">Menu</h5>
+              <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+            </div>
+            <div class="offcanvas-body">
+              <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+				<li class="nav-item dropdown">
+                  <a href="#about_us" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">About Us</a>
+                  <ul class="dropdown-menu">
+                    <li><a href="#our_vision" class="dropdown-item">Our Vision</a></li>
+                    <li><a href="#why_us" class="dropdown-item">Why Us?</a></li>
+                    
+                  </ul>
+                </li>
+				
+				<li class="nav-item">
+                  <a href="#our_services" class="nav-link">Services</a>
+                </li>
+				<li class="nav-item">
+                  <a href="#our_clients" class="nav-link">Our Clients</a>
+                </li>
+				<li class="nav-item">
+                  <a href="#email_form" class="nav-link">Contact</a>
+                </li>
+                
+              </ul>
+            </div>
+                 
+          </div>
+          <div class="form-check form-switch mode-switch pe-lg-1 ms-auto me-4" data-bs-toggle="mode">
+            <input type="checkbox" class="form-check-input" id="theme-mode">
+            <label class="form-check-label d-none d-sm-block" for="theme-mode">Light</label>
+            <label class="form-check-label d-none d-sm-block" for="theme-mode">Dark</label>
+          </div>
+          
+        </div>
+      </header>
+
+
+      <!-- Hero -->
+      <section class="pt-lg-4 mt-lg-3">
+        <div class="position-relative overflow-hidden">
+  
+          <!-- Image -->
+          <div class="container-fluid position-relative position-lg-absolute top-0 start-0 h-100">
+            <div class="row h-100 me-n4 me-n2">
+              <div class="col-lg-7 position-relative">
+                <div class="d-none d-sm-block d-lg-none" style="height: 400px;"></div>
+                <div class="d-sm-none" style="height: 300px;"></div>
+                <div class="jarallax position-absolute top-0 start-0 w-100 h-100 rounded-3 rounded-start-0 overflow-hidden" data-jarallax data-speed="0.3">
+                  <div class="jarallax-img" style="background-image: url(assets/img/landing/financial/industries/02.jpg);"></div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="container position-relative zindex-5 pt-lg-5 px-0 px-lg-3">
+            <div class="row pt-lg-5 mx-n4 mx-lg-n3">
+              <div class="col-xl-6 col-lg-7 offset-lg-5 offset-xl-6 pb-5">
+  
+                <!-- Card -->
+                <div class="card bg-dark border-light overflow-hidden py-4 px-2 p-sm-4">
+                  <span class="position-absolute top-0 start-0 w-100 h-100" style="background-color: rgba(255,255,255,.05);"></span>
+                  <div class="card-body position-relative zindex-5">
+                    <p class="fs-xl fw-bold text-primary text-uppercase mb-3">Power your business</p>
+                    <h1 class="display-5 text-light pb-3 mb-3">More than a crypto advisory firm</h1>
+                    <p class="fs-lg text-light opacity-70 mb-5">Quartz Advisers leading consulting services for web3 start-ups that can propel your project to the next level. From concept to execution, we will ensure your project is well-equipped for community adoption. 
+</p>
+                    <div class="d-flex flex-column flex-sm-row">
+                      <a href="#our_vision" class="btn btn-primary shadow-primary btn-lg mb-3 mb-sm-0 me-sm-4">About Us</a>
+                      <a href="#email_form" class="btn btn-outline-light btn-lg">
+                        Schedule a Call
+                        <i class="bx bx-right-arrow-alt fs-4 lh-1 ms-2 me-n1"></i>
+                      </a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="col-xxl-3 col-lg-4 offset-lg-8 offset-xxl-9 pt-lg-5 mt-xxl-5">
+  
+                <!-- Contacts (List) -->
+                <ul class="list-unstyled mb-0 px-4 px-lg-0">
+                  <li class="d-flex align-items-center pb-1 mb-2">
+                    <i class="bx bx-map fs-xl text-primary me-2"></i>
+                    Wilton Street, London, EC4 6HQ
+                  </li>
+                  <li class="d-flex align-items-center pb-1 mb-2">
+                    <i class="bx bx-envelope fs-xl text-primary me-2"></i>
+                    <a href="mailto:email@example.com" class="nav-link fw-normal p-0">contact@quartzadvisors.com</a>
+                  </li>
+                  <li class="d-flex align-items-center pb-1 mb-2">
+                    <i class="bx bx-phone-call fs-xl text-primary me-2"></i>
+                    <a href="tel:4065550120" class="nav-link fw-normal p-0">+40 783 982 112</a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+	  
+	  <!-- CTA carousel -->
+      <!-- <section class="pb-5 mb-2 mb-md-4 mb-lg-5" style="padding-top: 80px;"> -->
+	  <section class="container py-5 mt-md-3 my-lg-5">
+        <div class="bg-secondary pb-lg-4 pb-xl-5">
+          <div class="container pb-4 pb-md-5">
+            <div class="row">
+              <div class="col-xl-5 col-lg-6" style="margin-top: 3.5em;">
+
+                <!-- Swiper tabs -->
+                <div class="swiper-tabs mx-auto" style="max-width: 526px;">
+                  <div id="image-1" class="swiper-tab active">
+                    <img src="assets/img/landing/medical/cta/01.jpg" class="rounded-3" alt="Image">
+                  </div>
+                  <div id="image-2" class="swiper-tab">
+                    <img src="assets/img/landing/medical/cta/02.jpg" class="rounded-3" alt="Image">
+                  </div>
+                </div>
+              </div>
+              <div class="col-xl-5 col-lg-6 offset-xl-1 pt-2 pt-md-4 pt-lg-5 mt-4">
+
+                <!-- Slider prev/next buttons -->
+                <div class="d-flex justify-content-center justify-content-lg-start pb-3 mb-3">
+                  <button type="button" id="prev" class="btn btn-prev btn-icon btn-sm me-2">
+                    <i class="bx bx-chevron-left"></i>
+                  </button>
+                  <button type="button" id="next" class="btn btn-next btn-icon btn-sm ms-2">
+                    <i class="bx bx-chevron-right"></i>
+                  </button>
+                </div>
+
+                <!-- Swiper slider -->
+                <div class="swiper mx-0 mb-md-n2 mb-xxl-n3" data-swiper-options='{
+                  "spaceBetween": 30,
+                  "loop": true,
+                  "tabs": true,
+                  "navigation": {
+                    "prevEl": "#prev",
+                    "nextEl": "#next"
+                  }
+                }'>
+                  <div class="swiper-wrapper text-center text-lg-start">
+
+                    <!-- Item -->
+                    <div class="swiper-slide pb-4" data-swiper-tab="#image-1">
+                      <h2 class="h1 mb-4" id="our_vision">About<span class="text-success"> Us</span> </h2>
+                      <p class="pb-2 pb-xl-0 mb-4 mb-xl-5">We are more than a typical web3 advisory page. We leverage our vast experience in investment banking, consulting, marketing and tech with our deep passion and understanding for cryptocurrencies and blockchain technology. 
+
+<br><br>We are dedicated to fostering future adoption for promising web3 projects, as well as the transition of web2 businesses to a decentralized future. </p>
+                      <a href="#" class="btn btn-success btn-lg shadow-success">Learn more</a>
+                    </div>
+
+                    <!-- Item -->
+                    <div class="swiper-slide pb-4" data-swiper-tab="#image-2">
+                      <h2 class="h1 mb-4">Our<span class="text-danger"> Vision</span></h2>
+                      <p class="pb-2 pb-xl-0 mb-4 mb-xl-5">We believe web3 will find applicability in a wider variety of sectors, thus we are committed to make that a reality. 
+</p>
+                      <a href="#" class="btn btn-danger btn-lg shadow-danger">Learn more</a>
+                    </div>
+					
+					<!-- Item -->
+                    <div class="swiper-slide pb-4" data-swiper-tab="#image-2">
+                      <h2 class="h1 mb-4">Our <span class="text-danger">Mission</span></h2>
+                      <p class="pb-2 pb-xl-0 mb-4 mb-xl-5">We will enable groundbreaking web3 projects to reach the market and provide immense utilities to users. <br><br> To deliver positive results and outcomes for a high number of web3 projects, resulting in diversified income streams and larger community adoption. </p>
+                      <a href="#" class="btn btn-danger btn-lg shadow-danger">Learn more</a>
+                    </div>
+					
+					
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+
+      <!-- Services (Turns into carousel on narrow screens) -->
+      <section class="container py-5 mt-md-3 my-lg-5">
+        <h2 class="h1 pt-xl-2 pb-4 mb-2 mb-lg-3" id="our_services">Our Services</h2>
+        <div class="swiper" data-swiper-options='{
+          "slidesPerView": 1,
+          "spaceBetween": 24,
+          "autoHeight": true,
+          "pagination": {
+            "el": ".swiper-pagination",
+            "clickable": true
+          },
+          "breakpoints": {
+            "500": {
+              "slidesPerView": 2
+            },
+            "991": {
+              "slidesPerView": 3
+            }
+          }
+        }'>
+          <div class="swiper-wrapper">
+
+            <!-- Item -->
+            <div class="swiper-slide">
+              <a href="#"><img src="assets/img/landing/financial/services/04.jpg" class="rounded-3" alt="Image"></a>
+              <div class="pt-4">
+                <h3 class="h4">Tokenize your organization</h3>
+                <ul class="list-unstyled">
+                  <li class="d-flex align-items-center fs-sm mb-2">
+                    <i class="bx bx-check fs-xl text-primary me-2"></i>
+                    Create blockchain-powered ecosystems
+                  </li>
+                  <li class="d-flex align-items-center fs-sm mb-2">
+                    <i class="bx bx-check fs-xl text-primary me-2"></i>
+                    Decentralize your business operations
+                  </li>
+                  <li class="d-flex align-items-center fs-sm mb-2">
+                    <i class="bx bx-check fs-xl text-primary me-2"></i>
+                    Spread ownership & monetize new revenue streams
+                  </li>
+                </ul>
+              </div>
+              <a href="#" class="btn btn-link px-0">
+                Learn more
+                <i class="bx bx-right-arrow-alt fs-xl ms-2"></i>
+              </a>
+            </div>
+
+            <!-- Item -->
+            <div class="swiper-slide">
+              <a href="#"><img src="assets/img/landing/financial/services/02.jpg" class="rounded-3" alt="Image"></a>
+              <div class="pt-4">
+                <h3 class="h4">Provide new utilities</h3>
+                <ul class="list-unstyled">
+                  <li class="d-flex align-items-center fs-sm mb-2">
+                    <i class="bx bx-check fs-xl text-primary me-2"></i>
+                    Quis euismod lacus, at consectetur porta
+                  </li>
+                  <li class="d-flex align-items-center fs-sm mb-2">
+                    <i class="bx bx-check fs-xl text-primary me-2"></i>
+                    Dictumst enim lectus dis eget non metus cras
+                  </li>
+                  <li class="d-flex align-items-center fs-sm mb-2">
+                    <i class="bx bx-check fs-xl text-primary me-2"></i>
+                    Risus volutpat tellus hendrerit nibh
+                  </li>
+                </ul>
+              </div>
+              <a href="#" class="btn btn-link px-0">
+                Learn more
+                <i class="bx bx-right-arrow-alt fs-xl ms-2"></i>
+              </a>
+            </div>
+
+            <!-- Item -->
+            <div class="swiper-slide">
+              <a href="#"><img src="assets/img/landing/financial/services/03.jpg" class="rounded-3" alt="Image"></a>
+              <div class="pt-4">
+                <h3 class="h4">Expand your reach</h3>
+                <ul class="list-unstyled">
+                  <li class="d-flex align-items-center fs-sm mb-2">
+                    <i class="bx bx-check fs-xl text-primary me-2"></i>
+                    Web3-specific Growth Hacking
+                  </li>
+                  <li class="d-flex align-items-center fs-sm mb-2">
+                    <i class="bx bx-check fs-xl text-primary me-2"></i>
+                    Traditional Marketing
+                  </li>
+                  <li class="d-flex align-items-center fs-sm mb-2">
+                    <i class="bx bx-check fs-xl text-primary me-2"></i>
+                    Focus on Community Adoption
+                  </li>
+                </ul>
+              </div>
+              <a href="#" class="btn btn-link px-0">
+                Learn more
+                <i class="bx bx-right-arrow-alt fs-xl ms-2"></i>
+              </a>
+            </div>
+          </div>
+
+          <!-- Pagination (bullets) -->
+          <div class="swiper-pagination position-relative d-lg-none mt-5"></div>
+        </div>
+      </section>
+
+      <!-- Features (Icon boxes) -->
+      <section class="container py-1 my-1 my-md-4 my-lg-5">
+        <h2 class="h1 text-center pt-1 pt-xl-3 mb-lg-4" id="why_us">Why Us?</h2>
+        <div class="swiper mx-n2" data-swiper-options='{
+          "slidesPerView": 1,
+          "spaceBetween": 8,
+          "pagination": {
+            "el": ".swiper-pagination",
+            "clickable": true
+          },
+          "breakpoints": {
+            "500": {
+              "slidesPerView": 2
+            },
+            "800": {
+              "slidesPerView": 3
+            },
+            "1200": {
+              "slidesPerView": 4
+            }
+          }
+        }'>
+          <div class="swiper-wrapper">
+
+            <!-- Item -->
+            <div class="swiper-slide h-auto py-3">
+              <div class="card h-100 card-body card-hover mx-2">
+                <i class="bx bx-rocket display-5 fw-normal card-icon" style="color: #b4b7c9;"></i>
+                <h3 class="h6 pt-3 pb-1 mb-2">Whitepaper & Pitchdeck</h3>
+                <p class="mb-0">The crypto space is very specific in terms of documentation. 
+Whitepapers are the first thing investors and potential users will check out before trying out your web3 project, setting your project apart from scams. 
+Pitchdecks are essential when presenting your project's value proposition and utility, creating the necessary hype for investors and new supporters. 
+</p>
+              </div>
+            </div>
+
+            <!-- Item -->
+            <div class="swiper-slide h-auto py-3">
+              <div class="card h-100 card-body card-hover mx-2">
+                <i class="bx bx-like display-5 fw-normal card-icon" style="color: #b4b7c9;"></i>
+                <h3 class="h6 pt-3 pb-1 mb-2">Web3 Strategic Development</h3>
+                <p class="mb-0">When launching your web3 project, you need a comprehensive strategy, that encompasses all the major trends in crypto and builds on the hype. <br><br>Do you want to create something revolutionary? Are you looking to transition from web2 to web3? Then your focal point becomes your strategy! </p>
+              </div>
+            </div>
+
+            <!-- Item -->
+            <div class="swiper-slide h-auto py-3">
+              <div class="card h-100 card-body card-hover mx-2">
+                <i class="bx bx-time-five display-5 fw-normal card-icon" style="color: #b4b7c9;"></i>
+                <h3 class="h6 pt-3 pb-1 mb-2">Tokenomics & Token Design</h3>
+                <p class="mb-0">Your Token is what supports your crypto project, acting either as the governance, utility or rewards mechanism. <br><br> We can determine your token’s utility by considering potential community needs as well as your business model. 
+<br><br>When launching, your tokenomics will determine your project’s success and adoption level, as we can devise allocations to be aligned with your objectives.  
+</p>
+              </div>
+            </div>
+
+            <!-- Item -->
+            <div class="swiper-slide h-auto py-3">
+              <div class="card h-100 card-body card-hover mx-2">
+                <i class="bx bx-group display-5 fw-normal card-icon" style="color: #b4b7c9;"></i>
+                <h3 class="h6 pt-3 pb-1 mb-2">Management & Marketing </h3>
+                <p class="mb-0">Without growing and thriving communities, crypto projects are dead. We know how to market your project through the necessary channels (Telegram, Discord, Twitter, Medium), with effective content strategies and engaging community interactions. <br><br>
+In addition, we have experience in copywriting and social media management, ensuring that your followers are up to date with the latest news about your project. 
+</p>
+              </div>
+            </div>
+          </div>
+		  
+		  <div class="swiper-wrapper">
+
+            <!-- Item -->
+            <div class="swiper-slide h-auto py-3">
+              <div class="card h-100 card-body card-hover mx-2">
+                <i class="bx bx-rocket display-5 fw-normal card-icon" style="color: #b4b7c9;"></i>
+                <h3 class="h6 pt-3 pb-1 mb-2">Partnership Enablement </h3>
+                <p class="mb-0">Building a huge network of partners for cross-overs, integrations and much more, that will foster adoption of your crypto project. Your community will expand, while your project will get increased visibility, expanding its use cases. We can intermediate links between projects, thanks to our ever-growing network of partners. </p>
+              </div>
+            </div>
+
+            <!-- Item -->
+            <div class="swiper-slide h-auto py-3">
+              <div class="card h-100 card-body card-hover mx-2">
+                <i class="bx bx-like display-5 fw-normal card-icon" style="color: #b4b7c9;"></i>
+                <h3 class="h6 pt-3 pb-1 mb-2">Research & Analysis </h3>
+                <p class="mb-0">Do you want to find out what your competition is or where does your web3 project position itself in terms of adoption? Do you want to test out potential demand for your utility? Need insights into the latest crypto trends? If you answered yes to any of these questions, then you understand how important Market Research is in the web3 space. </p>
+              </div>
+            </div>
+
+            <!-- Item -->
+            <div class="swiper-slide h-auto py-3">
+              <div class="card h-100 card-body card-hover mx-2">
+                <i class="bx bx-time-five display-5 fw-normal card-icon" style="color: #b4b7c9;"></i>
+                <h3 class="h6 pt-3 pb-1 mb-2">Regulatory & Compliance</h3>
+                <p class="mb-0">  Navigating the complex legal and regulatory landscape surrounding Web3 is a challenge, due to all the grey areas, loopholes and jurisdiction related factors. Together with our partners, we can advise on regulatory compliance, draft legal documents, and provide support for legal disputes.</p>
+              </div>
+            </div>
+			
+			<!-- Item -->
+            <div class="swiper-slide h-auto py-3">
+              <div class="card h-100 card-body card-hover mx-2">
+                <i class="bx bx-rocket display-5 fw-normal card-icon" style="color: #b4b7c9;"></i>
+                <h3 class="h6 pt-3 pb-1 mb-2">Tailored Services</h3>
+                <p class="mb-0">Our service offering enables our clients to maximize their outcomes and ensure that crypto projects are equipped for success. We do not offer a one-size fits all approach, as all our services can be tailored to our client’s needs. Please contact us to discuss further details about our tailored services. </p>
+              </div>
+            </div>
+
+            
+          </div>
+		  
+		  
+
+          <!-- Pagination (bullets) -->
+          <div class="swiper-pagination position-relative d-xl-none pt-3 mt-4"></div>
+        </div>
+        <div class="d-flex flex-column flex-sm-row justify-content-center pt-3 pt-sm-4">
+          <a href="#" class="btn btn-primary shadow-primary btn-lg">Request a price</a>
+        </div>
+      </section>
+
+
+      <!-- Industries (Slider) -->
+      <section class="container pt-xl-3 pb-5">
+        <h2 class="h1 text-center text-lg-start pb-4 mb-1 mb-lg-3">Industries We Serve</h2>
+        <div class="row pb-2 pb-md-4 pb-lg-5">
+          <div class="col-xl-4 col-lg-5 d-flex flex-column order-2 order-lg-1">
+
+            <!-- Swiper slider -->
+            <div class="swiper mx-0 mb-md-n2 mb-xxl-n3" data-swiper-options='{
+              "spaceBetween": 30,
+              "loop": true,
+              "tabs": true,
+              "autoHeight": true,
+              "navigation": {
+                "prevEl": "#prev-industry",
+                "nextEl": "#next-industry"
+              }
+            }'>
+              <div class="swiper-wrapper text-center text-lg-start">
+
+                <!-- Item -->
+                <div class="swiper-slide" data-swiper-tab="#industry-1">
+                  <h3 class="h4 mb-4">
+                    <a href="#" class="nav-link justify-content-center justify-content-lg-start fw-bold p-0">
+                      Transportation &amp; Logistics
+                      <i class="bx bx-right-arrow-alt text-primary fs-3 fw-normal ms-2 mt-1"></i>
+                    </a>
+                  </h3>
+                  <p>Risus massa fames metus lectus diam maecenas dui. Nibh morbi id purus eget tellus diam, integer blandit. Ac condimentum a nisl sagittis, interdum. Et viverra maecenas quis cras sed gravida volutpat, cursus enim. Enim ut nulla netus porta lacus diam. Et enim ultrices nunc, nunc. In iaculis venenatis at sit.</p>
+                </div>
+
+                <!-- Item -->
+                <div class="swiper-slide" data-swiper-tab="#industry-2">
+                  <h3 class="h4 mb-4">
+                    <a href="#" class="nav-link justify-content-center justify-content-lg-start fw-bold p-0">
+                      Construction &amp; Real Estate
+                      <i class="bx bx-right-arrow-alt text-primary fs-3 fw-normal ms-2 mt-1"></i>
+                    </a>
+                  </h3>
+                  <p>Nunc, amet et, et at habitant. Eget quis justo, metus at metus sapien. Urna quisque rutrum pharetra pulvinar vitae quam blandit non. Orci tempor cursus egestas quis orci at nisi maecenas. Enim in ultrices tortor, nibh quis sollicitudin tellus non maecenas. In libero ut semper nunc magna tortor.</p>
+                </div>
+
+                <!-- Item -->
+                <div class="swiper-slide" data-swiper-tab="#industry-3">
+                  <h3 class="h4 mb-4">
+                    <a href="#" class="nav-link justify-content-center justify-content-lg-start fw-bold p-0">
+                      Education
+                      <i class="bx bx-right-arrow-alt text-primary fs-3 fw-normal ms-2 mt-1"></i>
+                    </a>
+                  </h3>
+                  <p>Vivamus nisl sit volutpat laoreet ligula et. Nunc, duis est justo, cras ipsum vulputate eget tellus augue. Amet, sagittis ut enim nisl commodo, pharetra. Sapien imperdiet tristique interdum aliquet varius vitae facilisis vel. Erat convallis eget elit eget iaculis. Morbi id facilisis ligula odio sed amet suspendisse duis aliquet. Justo quam convallis id sed.</p>
+                </div>
+              </div>
+            </div>
+
+            <!-- Slider controls (Prev / next buttons) -->
+            <div class="d-flex justify-content-center justify-content-lg-start mt-2 mt-lg-auto">
+              <button type="button" id="prev-industry" class="btn btn-prev btn-icon btn-sm me-2">
+                <i class="bx bx-chevron-left"></i>
+              </button>
+              <button type="button" id="next-industry" class="btn btn-next btn-icon btn-sm ms-2">
+                <i class="bx bx-chevron-right"></i>
+              </button>
+            </div>
+          </div>
+          <div class="col-lg-7 offset-xl-1 order-1 order-lg-2 pt-lg-3 mt-lg-n5 mb-4 mb-lg-0">
+
+            <!-- Swiper tabs (Industry images) -->
+            <div class="swiper-tabs mt-lg-n5">
+
+              <!-- Industry 1 -->
+              <div id="industry-1" class="swiper-tab active">
+                <img src="assets/img/landing/financial/industries/01.jpg" class="rounded-3" alt="Image">
+              </div>
+
+              <!-- Industry 2 -->
+              <div id="industry-2" class="swiper-tab">
+                <img src="assets/img/landing/financial/industries/02.jpg" class="rounded-3" alt="Image">
+              </div>
+
+              <!-- Industry 3 -->
+              <div id="industry-3" class="swiper-tab">
+                <img src="assets/img/landing/financial/industries/03.jpg" class="rounded-3" alt="Image">
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+
+      <!-- Brands (Carousel) -->
+      <section class="container my-n2 my-md-0">
+        <div class="swiper mx-n2" data-swiper-options='{
+          "slidesPerView": 2,
+          "pagination": {
+            "el": ".swiper-pagination",
+            "clickable": true
+          },
+          "breakpoints": {
+            "500": {
+              "slidesPerView": 3,
+              "spaceBetween": 8
+            },
+            "650": {
+              "slidesPerView": 4,
+              "spaceBetween": 8
+            },
+            "900": {
+              "slidesPerView": 5,
+              "spaceBetween": 8
+            },
+            "1100": {
+              "slidesPerView": 6,
+              "spaceBetween": 8
+            }
+          }
+        }'>
+          <div class="swiper-wrapper">
+
+            <!-- Item -->
+            <div class="swiper-slide py-3">
+              <a href="#" class="card card-body card-hover px-2 mx-2">
+                <img src="assets/img/brands/01.svg" class="d-block mx-auto my-2" width="154" alt="Brand">
+              </a>
+            </div>
+
+            <!-- Item -->
+            <div class="swiper-slide py-3">
+              <a href="#" class="card card-body card-hover px-2 mx-2">
+                <img src="assets/img/brands/02.svg" class="d-block mx-auto my-2" width="154" alt="Brand">
+              </a>
+            </div>
+
+            <!-- Item -->
+            <div class="swiper-slide py-3">
+              <a href="#" class="card card-body card-hover px-2 mx-2">
+                <img src="assets/img/brands/03.svg" class="d-block mx-auto my-2" width="154" alt="Brand">
+              </a>
+            </div>
+
+            <!-- Item -->
+            <div class="swiper-slide py-3">
+              <a href="#" class="card card-body card-hover px-2 mx-2">
+                <img src="assets/img/brands/04.svg" class="d-block mx-auto my-2" width="154" alt="Brand">
+              </a>
+            </div>
+
+            <!-- Item -->
+            <div class="swiper-slide py-3">
+              <a href="#" class="card card-body card-hover px-2 mx-2">
+                <img src="assets/img/brands/05.svg" class="d-block mx-auto my-2" width="154" alt="Brand">
+              </a>
+            </div>
+
+            <!-- Item -->
+            <div class="swiper-slide py-3">
+              <a href="#" class="card card-body card-hover px-2 mx-2">
+                <img src="assets/img/brands/06.svg" class="d-block mx-auto my-2" width="154" alt="Brand">
+              </a>
+            </div>
+          </div>
+
+          <!-- Pagination (bullets) -->
+          <div class="swiper-pagination position-relative pt-2 mt-4"></div>
+        </div>
+      </section>
+
+
+      <!-- Our Clients -->
+      <section class="container py-5 mb-2 mt-md-2 mb-md-4 mt-lg-4 mb-lg-5">
+        <div class="row pt-xl-1 pb-xl-3">
+          <div class="col-lg-3 col-md-4">
+            <h2 class="text-center text-md-start mx-auto mx-md-0 pt-md-2" style="max-width: 300px;" id="our_clients">What Our <br class="d-none d-md-inline">Clients Say <br class="d-none d-md-inline">About Us:</h2>
+
+            <!-- Slider controls (Prev / next buttons) -->
+            <div class="d-flex justify-content-center justify-content-md-start pb-4 mb-2 pt-2 pt-md-4 mt-md-5">
+              <button type="button" id="prev-testimonial" class="btn btn-prev btn-icon btn-sm me-2">
+                <i class="bx bx-chevron-left"></i>
+              </button>
+              <button type="button" id="next-testimonial" class="btn btn-next btn-icon btn-sm ms-2">
+                <i class="bx bx-chevron-right"></i>
+              </button>
+            </div>
+          </div>
+          <div class="col-lg-9 col-md-8">
+            <div class="swiper mx-n2" data-swiper-options='{
+              "slidesPerView": 1,
+              "spaceBetween": 8,
+              "loop": true,
+              "navigation": {
+                "prevEl": "#prev-testimonial",
+                "nextEl": "#next-testimonial"
+              },
+              "breakpoints": {
+                "500": {
+                  "slidesPerView": 2
+                },
+                "1000": {
+                  "slidesPerView": 2
+                },
+                "1200": {
+                  "slidesPerView": 3
+                }
+              }
+            }'>
+              <div class="swiper-wrapper">
+  
+                <!-- Item -->
+                <div class="swiper-slide h-auto pt-4">
+                  <figure class="d-flex flex-column h-100 px-2 px-sm-0 mb-0 mx-2">
+                    <div class="card h-100 position-relative border-0 shadow-sm pt-4">
+                      <span class="btn btn-icon btn-primary shadow-primary pe-none position-absolute top-0 start-0 translate-middle-y ms-4">
+                        <i class="bx bxs-quote-left"></i>
+                      </span>
+                      <blockquote class="card-body pb-3 mb-0">
+                        <p class="mb-0">Id mollis consectetur congue egestas egestas suspendisse blandit justo. Tellus augue commodo id quis tempus etiam pulvinar at maecenas.</p>
+                      </blockquote>
+                      <div class="card-footer border-0 text-nowrap pt-0">
+                        <i class="bx bxs-star text-warning"></i>
+                        <i class="bx bxs-star text-warning"></i>
+                        <i class="bx bxs-star text-warning"></i>
+                        <i class="bx bx-star text-muted opacity-75"></i>
+                        <i class="bx bx-star text-muted opacity-75"></i>
+                      </div>
+                    </div>
+                    <figcaption class="d-flex align-items-center ps-4 pt-4">
+                      <img src="assets/img/avatar/03.jpg" width="48" class="rounded-circle" alt="Fannie Summers">
+                      <div class="ps-3">
+                        <h6 class="fs-sm fw-semibold mb-0">Fannie Summers</h6>
+                        <span class="fs-xs text-muted">Medical Center patient</span>
+                      </div>
+                    </figcaption>
+                  </figure>
+                </div>
+  
+                <!-- Item -->
+                <div class="swiper-slide h-auto pt-4">
+                  <figure class="d-flex flex-column h-100 px-2 px-sm-0 mb-0 mx-2">
+                    <div class="card h-100 position-relative border-0 shadow-sm pt-4">
+                      <span class="btn btn-icon btn-primary shadow-primary pe-none position-absolute top-0 start-0 translate-middle-y ms-4">
+                        <i class="bx bxs-quote-left"></i>
+                      </span>
+                      <blockquote class="card-body pb-3 mb-0">
+                        <p class="mb-0">Phasellus luctus nisi id orci condimentum, at cursus nisl vestibulum. Orci varius natoque penatibus et magnis dis parturient montes commodo.</p>
+                      </blockquote>
+                      <div class="card-footer border-0 text-nowrap pt-0">
+                        <i class="bx bxs-star text-warning"></i>
+                        <i class="bx bxs-star text-warning"></i>
+                        <i class="bx bxs-star text-warning"></i>
+                        <i class="bx bxs-star text-warning"></i>
+                        <i class="bx bxs-star text-warning"></i>
+                      </div>
+                    </div>
+                    <figcaption class="d-flex align-items-center ps-4 pt-4">
+                      <img src="assets/img/avatar/02.jpg" width="48" class="rounded-circle" alt="Robert Fox">
+                      <div class="ps-3">
+                        <h6 class="fs-sm fw-semibold mb-0">Robert Fox</h6>
+                        <span class="fs-xs text-muted">Medical Center patient</span>
+                      </div>
+                    </figcaption>
+                  </figure>
+                </div>
+  
+                <!-- Item -->
+                <div class="swiper-slide h-auto pt-4">
+                  <figure class="d-flex flex-column h-100 px-2 px-sm-0 mb-0 mx-2">
+                    <div class="card h-100 position-relative border-0 shadow-sm pt-4">
+                      <span class="btn btn-icon btn-primary shadow-primary pe-none position-absolute top-0 start-0 translate-middle-y ms-4">
+                        <i class="bx bxs-quote-left"></i>
+                      </span>
+                      <blockquote class="card-body pb-3 mb-0">
+                        <p class="mb-0">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris ipsum odio, bibendum ornare mi at, efficitur urna.</p>
+                      </blockquote>
+                      <div class="card-footer border-0 text-nowrap pt-0">
+                        <i class="bx bxs-star text-warning"></i>
+                        <i class="bx bxs-star text-warning"></i>
+                        <i class="bx bxs-star text-warning"></i>
+                        <i class="bx bxs-star text-warning"></i>
+                        <i class="bx bx-star text-muted opacity-75"></i>
+                      </div>
+                    </div>
+                    <figcaption class="d-flex align-items-center ps-4 pt-4">
+                      <img src="assets/img/avatar/06.jpg" width="48" class="rounded-circle" alt="Annette Black">
+                      <div class="ps-3">
+                        <h6 class="fs-sm fw-semibold mb-0">Annette Black</h6>
+                        <span class="fs-xs text-muted">Medical Center patient</span>
+                      </div>
+                    </figcaption>
+                  </figure>
+                </div>
+  
+                <!-- Item -->
+                <div class="swiper-slide h-auto pt-4">
+                  <figure class="d-flex flex-column h-100 px-2 px-sm-0 mb-0 mx-2">
+                    <div class="card h-100 position-relative border-0 shadow-sm pt-4">
+                      <span class="btn btn-icon btn-primary shadow-primary pe-none position-absolute top-0 start-0 translate-middle-y ms-4">
+                        <i class="bx bxs-quote-left"></i>
+                      </span>
+                      <blockquote class="card-body pb-3 mb-0">
+                        <p class="mb-0">Etiam augue ante, imperdiet et nunc sed, bibendum faucibus est. Suspendisse egestas facilisis erat eu eleifend.</p>
+                      </blockquote>
+                      <div class="card-footer border-0 text-nowrap pt-0">
+                        <i class="bx bxs-star text-warning"></i>
+                        <i class="bx bxs-star text-warning"></i>
+                        <i class="bx bxs-star text-warning"></i>
+                        <i class="bx bx-star text-muted opacity-75"></i>
+                        <i class="bx bx-star text-muted opacity-75"></i>
+                      </div>
+                    </div>
+                    <figcaption class="d-flex align-items-center ps-4 pt-4">
+                      <img src="assets/img/avatar/05.jpg" width="48" class="rounded-circle" alt="Jerome Bell">
+                      <div class="ps-3">
+                        <h6 class="fs-sm fw-semibold mb-0">Jerome Bell</h6>
+                        <span class="fs-xs text-muted">Medical Center patient</span>
+                      </div>
+                    </figcaption>
+                  </figure>
+                </div>
+  
+                <!-- Item -->
+                <div class="swiper-slide h-auto pt-4">
+                  <figure class="d-flex flex-column h-100 px-2 px-sm-0 mb-0 mx-2">
+                    <div class="card h-100 position-relative border-0 shadow-sm pt-4">
+                      <span class="btn btn-icon btn-primary shadow-primary pe-none position-absolute top-0 start-0 translate-middle-y ms-4">
+                        <i class="bx bxs-quote-left"></i>
+                      </span>
+                      <blockquote class="card-body pb-3 mb-0">
+                        <p class="mb-0">Pellentesque finibus congue egestas egestas suspendisse blandit justo. Tellus augue commodo id quis tempus etiam pulvinar at maecenas.</p>
+                      </blockquote>
+                      <div class="card-footer border-0 text-nowrap pt-0">
+                        <i class="bx bxs-star text-warning"></i>
+                        <i class="bx bxs-star text-warning"></i>
+                        <i class="bx bxs-star text-warning"></i>
+                        <i class="bx bxs-star text-warning"></i>
+                        <i class="bx bx-star text-muted opacity-75"></i>
+                      </div>
+                    </div>
+                    <figcaption class="d-flex align-items-center ps-4 pt-4">
+                      <img src="assets/img/avatar/01.jpg" width="48" class="rounded-circle" alt="Albert Flores">
+                      <div class="ps-3">
+                        <h6 class="fs-sm fw-semibold mb-0">Albert Flores</h6>
+                        <span class="fs-xs text-muted">Medical Center patient</span>
+                      </div>
+                    </figcaption>
+                  </figure>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Latest news (Carousel) -->
+      <section class="bg-secondary py-5">
+        <div class="container py-2 py-md-4 py-lg-5">
+          <h2 class="h1 text-center pb-4 mb-1 mb-lg-3">Latest News</h2>
+          <div class="position-relative px-xl-5">
+          
+            <!-- Slider prev/next buttons -->
+            <button type="button" id="prev-news" class="btn btn-prev btn-icon btn-sm position-absolute top-50 start-0 translate-middle-y d-none d-xl-inline-flex">
+              <i class="bx bx-chevron-left"></i>
+            </button>
+            <button type="button" id="next-news" class="btn btn-next btn-icon btn-sm position-absolute top-50 end-0 translate-middle-y d-none d-xl-inline-flex">
+              <i class="bx bx-chevron-right"></i>
+            </button>
+  
+            <!-- Slider -->
+            <div class="px-xl-2">
+              <div class="swiper mx-n2" data-swiper-options='{
+                "slidesPerView": 1,
+                "loop": true,
+                "pagination": {
+                  "el": ".swiper-pagination",
+                  "clickable": true
+                },
+                "navigation": {
+                  "prevEl": "#prev-news",
+                  "nextEl": "#next-news"
+                },
+                "breakpoints": {
+                  "500": {
+                    "slidesPerView": 2
+                  },
+                  "1000": {
+                    "slidesPerView": 3
+                  }
+                }
+              }'>
+                <div class="swiper-wrapper">
+      
+                  <!-- Item -->
+                  <div class="swiper-slide h-auto pb-3">
+                    <article class="card h-100 border-0 shadow-sm mx-2">
+                      <div class="position-relative">
+                        <a href="#" class="position-absolute top-0 start-0 w-100 h-100" aria-label="Read more"></a>
+                        <a href="#" class="btn btn-icon btn-light bg-white border-white btn-sm rounded-circle position-absolute top-0 end-0 zindex-5 me-3 mt-3" data-bs-toggle="tooltip" data-bs-placement="left" title="Read later">
+                          <i class="bx bx-bookmark"></i>
+                        </a>
+                        <img src="assets/img/landing/financial/news/01.jpg" class="card-img-top" alt="Image">
+                      </div>
+                      <div class="card-body pb-4">
+                        <div class="d-flex align-items-center justify-content-between mb-3">
+                          <a href="#" class="badge fs-sm text-nav bg-secondary text-decoration-none">Business</a>
+                          <span class="fs-sm text-muted">12 hours ago</span>
+                        </div>
+                        <h3 class="h5 mb-0">
+                          <a href="#">How agile is your forecasting process?</a>
+                        </h3>
+                      </div>
+                      <div class="card-footer py-4">
+                        <a href="#" class="d-flex align-items-center text-decoration-none">
+                          <img src="assets/img/avatar/40.jpg" class="rounded-circle" width="48" alt="Avatar">
+                          <div class="ps-3">
+                            <h6 class="fs-base fw-semibold mb-0">Marvin McKinney</h6>
+                            <span class="fs-sm text-muted">Deputy Director, Capital Department</span>
+                          </div>
+                        </a>
+                      </div>
+                    </article>
+                  </div>
+      
+                  <!-- Item -->
+                  <div class="swiper-slide h-auto pb-3">
+                    <article class="card h-100 border-0 shadow-sm mx-2">
+                      <div class="position-relative">
+                        <a href="#" class="position-absolute top-0 start-0 w-100 h-100" aria-label="Read more"></a>
+                        <a href="#" class="btn btn-icon btn-light bg-white border-white btn-sm rounded-circle position-absolute top-0 end-0 zindex-5 me-3 mt-3" data-bs-toggle="tooltip" data-bs-placement="left" title="Read later">
+                          <i class="bx bx-bookmark"></i>
+                        </a>
+                        <img src="assets/img/landing/financial/news/02.jpg" class="card-img-top" alt="Image">
+                      </div>
+                      <div class="card-body pb-4">
+                        <div class="d-flex align-items-center justify-content-between mb-3">
+                          <a href="#" class="badge fs-sm text-nav bg-secondary text-decoration-none">Enterprise</a>
+                          <span class="fs-sm text-muted">1 day ago</span>
+                        </div>
+                        <h3 class="h5 mb-0">
+                          <a href="#">A future with high public debt: low-for-long is not low forever</a>
+                        </h3>
+                      </div>
+                      <div class="card-footer py-4">
+                        <a href="#" class="d-flex align-items-center text-decoration-none">
+                          <img src="assets/img/avatar/04.jpg" class="rounded-circle" width="48" alt="Avatar">
+                          <div class="ps-3">
+                            <h6 class="fs-base fw-semibold mb-0">Jenny Wilson</h6>
+                            <span class="fs-sm text-muted">Financial Sector Expert</span>
+                          </div>
+                        </a>
+                      </div>
+                    </article>
+                  </div>
+      
+                  <!-- Item -->
+                  <div class="swiper-slide h-auto pb-3">
+                    <article class="card h-100 border-0 shadow-sm mx-2">
+                      <div class="position-relative">
+                        <a href="#" class="position-absolute top-0 start-0 w-100 h-100" aria-label="Read more"></a>
+                        <a href="#" class="btn btn-icon btn-light bg-white border-white btn-sm rounded-circle position-absolute top-0 end-0 zindex-5 me-3 mt-3" data-bs-toggle="tooltip" data-bs-placement="left" title="Read later">
+                          <i class="bx bx-bookmark"></i>
+                        </a>
+                        <img src="assets/img/landing/financial/news/03.jpg" class="card-img-top" alt="Image">
+                      </div>
+                      <div class="card-body pb-4">
+                        <div class="d-flex align-items-center justify-content-between mb-3">
+                          <a href="#" class="badge fs-sm text-nav bg-secondary text-decoration-none">Finance</a>
+                          <span class="fs-sm text-muted">Nov 24, 2021</span>
+                        </div>
+                        <h3 class="h5 mb-0">
+                          <a href="#">Understanding the rise in long-term rates</a>
+                        </h3>
+                      </div>
+                      <div class="card-footer py-4">
+                        <a href="#" class="d-flex align-items-center text-decoration-none">
+                          <img src="assets/img/avatar/05.jpg" class="rounded-circle" width="48" alt="Avatar">
+                          <div class="ps-3">
+                            <h6 class="fs-base fw-semibold mb-0">Albert Flores</h6>
+                            <span class="fs-sm text-muted">Financial Counsellor and Director</span>
+                          </div>
+                        </a>
+                      </div>
+                    </article>
+                  </div>
+      
+                  <!-- Item -->
+                  <div class="swiper-slide h-auto pb-3">
+                    <article class="card h-100 border-0 shadow-sm mx-2">
+                      <div class="position-relative">
+                        <a href="#" class="position-absolute top-0 start-0 w-100 h-100" aria-label="Read more"></a>
+                        <a href="#" class="btn btn-icon btn-light bg-white border-white btn-sm rounded-circle position-absolute top-0 end-0 zindex-5 me-3 mt-3" data-bs-toggle="tooltip" data-bs-placement="left" title="Read later">
+                          <i class="bx bx-bookmark"></i>
+                        </a>
+                        <img src="assets/img/landing/financial/news/04.jpg" class="card-img-top" alt="Image">
+                      </div>
+                      <div class="card-body pb-4">
+                        <div class="d-flex align-items-center justify-content-between mb-3">
+                          <a href="#" class="badge fs-sm text-nav bg-secondary text-decoration-none">Ticks &amp; Trips</a>
+                          <span class="fs-sm text-muted">Oct 13, 2021</span>
+                        </div>
+                        <h3 class="h5 mb-0">
+                          <a href="#">Stocks making the biggest moves after hours</a>
+                        </h3>
+                      </div>
+                      <div class="card-footer py-4">
+                        <a href="#" class="d-flex align-items-center text-decoration-none">
+                          <img src="assets/img/avatar/41.jpg" class="rounded-circle" width="48" alt="Avatar">
+                          <div class="ps-3">
+                            <h6 class="fs-base fw-semibold mb-0">Jerome Bell</h6>
+                            <span class="fs-sm text-muted">Business Analyst</span>
+                          </div>
+                        </a>
+                      </div>
+                    </article>
+                  </div>
+                </div>
+      
+                <!-- Pagination (bullets) -->
+                <div class="swiper-pagination position-relative bottom-0 mt-4 mb-lg-2"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+
+      <!-- Contact form -->
+      <section class="position-relative py-5" id="email_form">
+        <div class="container position-relative zindex-5 py-2 py-md-4 py-lg-5">
+          <div class="row justify-content-center text-center pt-xl-2 pb-4 mb-1 mb-lg-3">
+            <div class="col-xl-6 col-lg-7 col-md-8 col-sm-11">
+              <h2 class="mb-4">Let's Change the Game Together</h2>
+			  <h3 class="h4 text-primary">Interested in working with us?</h3>
+              <p class="text-muted mb-0">As we tailor our solutions to specific client needs, we price our services on a case-by-case basis.
+<br><br>
+Let’s schedule a call to discuss how we can take your crypto project to the moon! Web3 is taking over the world - it’s time to be part of it.</p>
+            </div>
+          </div>
+          <div class="row justify-content-center">
+            <div class="col-lg-8 col-md-10">
+              <form class="row needs-validation" novalidate>
+                <div class="col-sm-6 mb-4">
+                  <label for="fn" class="form-label">First name</label>
+                  <input type="text" id="fn" class="form-control" required>
+                  <div class="invalid-feedback">Please, enter your first name!</div>
+                </div>
+                <div class="col-sm-6 mb-4">
+                  <label for="ln" class="form-label">Last name</label>
+                  <input type="text" id="ln" class="form-control" required>
+                  <div class="invalid-feedback">Please, enter your last name!</div>
+                </div>
+                <div class="col-sm-6 mb-4">
+                  <label for="email" class="form-label">Email address</label>
+                  <input type="email" id="email" class="form-control" required>
+                  <div class="invalid-feedback">Please, provide a valid email address!</div>
+                </div>
+                <div class="col-sm-6 mb-4">
+                  <label for="phone" class="form-label">Phone</label>
+                  <input type="text" id="phone" class="form-control" data-format='{"numericOnly": true, "delimiters": ["+1 ", " ", " "], "blocks": [0, 3, 3, 2]}' placeholder="+1 ___ ___ __">
+                </div>
+                <div class="col-sm-6 mb-4">
+                  <label for="city" class="form-label">City</label>
+                  <select id="city" class="form-select" required>
+                    <option value="" disabled selected>Choose city</option>
+                    <option value="Boston">Boston</option>
+                    <option value="Chicago">Chicago</option>
+                    <option value="Los Angeles">Los Angeles</option>
+                    <option value="Miami">Miami</option>
+                    <option value="New York">New York</option>
+                    <option value="Philadelphia">Philadelphia</option>
+                  </select>
+                  <div class="invalid-feedback">Please, choose your city!</div>
+                </div>
+                <div class="col-sm-6 mb-4">
+                  <label for="company" class="form-label">Your company</label>
+                  <input type="text" id="company" class="form-control">
+                </div>
+                <div class="col-sm-6 mb-4">
+                  <label for="position" class="form-label">Your position</label>
+                  <select id="position" class="form-select">
+                    <option value="Owner">Owner</option>
+                    <option value="CEO">CEO</option>
+                    <option value="Manager">Manager</option>
+                    <option value="Accountant">Accountant</option>
+                  </select>
+                </div>
+                <div class="col-sm-6 mb-4">
+                  <label for="people" class="form-label">People in company</label>
+                  <select id="people" class="form-select">
+                    <option value="0-10">0-10</option>
+                    <option value="10-25">10-25</option>
+                    <option value="25-50">25-50</option>
+                    <option value="50-100">50-100</option>
+                  </select>
+                </div>
+                <div class="col-12 mb-4">
+                  <label for="message" class="form-label">Message</label>
+                  <textarea id="message" class="form-control" rows="4" required></textarea>
+                  <div class="invalid-feedback">Please, enter your message!</div>
+                </div>
+                <div class="col-12 text-center pt-2 pt-md-3 pt-lg-4">
+                  <button type="submit" class="btn btn-primary shadow-primary btn-lg">Send a request</button>
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+
+        <!-- BG shape -->
+        <div class="position-absolute end-0 bottom-0 text-primary">
+          <svg width="469" height="343" viewBox="0 0 469 343" fill="none" xmlns="http://www.w3.org/2000/svg"><path opacity="0.08" fill-rule="evenodd" clip-rule="evenodd" d="M273.631 680.872C442.436 768.853 639.315 708.216 717.593 558.212C795.871 408.208 732.941 212.157 564.137 124.176C395.333 36.195 198.453 96.8326 120.175 246.836C41.8972 396.84 104.827 592.891 273.631 680.872ZM236.335 752.344C440.804 858.914 688.289 788.686 789.109 595.486C889.928 402.286 805.903 159.274 601.433 52.7043C396.964 -53.8654 149.479 16.3623 48.6595 209.562C-52.1598 402.762 31.8652 645.774 236.335 752.344Z" fill="currentColor"/><path opacity="0.08" fill-rule="evenodd" clip-rule="evenodd" d="M298.401 633.404C434.98 704.59 598.31 656.971 664.332 530.451C730.355 403.932 675.946 242.827 539.367 171.642C402.787 100.457 239.458 148.076 173.435 274.595C107.413 401.114 161.822 562.219 298.401 633.404ZM288.455 652.464C434.545 728.606 611.369 678.429 683.403 540.391C755.437 402.353 695.402 228.725 549.312 152.583C403.222 76.4404 226.398 126.617 154.365 264.655C82.331 402.693 142.365 576.321 288.455 652.464Z" fill="currentColor"/></svg>
+        </div>
+      </section>
+    </main>
+
+
+    <!-- Footer -->
+    <footer class="footer dark-mode bg-dark border-top border-light pt-5 pb-4 pb-lg-5">
+      <div class="container pt-lg-4">
+        <div class="row pb-5">
+          <!-- <div class="col-lg-4 col-md-6"> -->
+		  <div class="col-lg-6">
+            <div class="navbar-brand text-dark">
+              <img src="assets/img/logo.svg" width="30%" alt="Quartz Advisers">
+              <h1>Quartz Advisers</h1>
+            </div>
+          </div>
+		  
+		
+		  
+          <!-- <div class="col-xl-6 col-lg-7 col-md-5 offset-xl-2 offset-md-1 pt-4 pt-md-1 pt-lg-0"> -->
+		  <div class="col-lg-6">
+            <div id="footer-links" class="row">
+              <div class="col-lg-4">
+                <h6 class="mb-2">
+                  <a href="#useful-links" class="d-block text-dark dropdown-toggle d-lg-none py-2" data-bs-toggle="collapse">Useful Links</a>
+                </h6>
+                <div id="useful-links" class="collapse d-lg-block" data-bs-parent="#footer-links">
+                  <ul class="nav flex-column pb-lg-1 mb-lg-3">
+                    <li class="nav-item"><a href="#" class="nav-link d-inline-block px-0 pt-1 pb-2">About</a></li>
+                    <li class="nav-item"><a href="#" class="nav-link d-inline-block px-0 pt-1 pb-2">Services</a></li>
+                    <li class="nav-item"><a href="#" class="nav-link d-inline-block px-0 pt-1 pb-2">Our Clients</a></li>
+                    <li class="nav-item"><a href="#" class="nav-link d-inline-block px-0 pt-1 pb-2">News</a></li>
+                  </ul>
+                  
+                </div>
+              </div>
+              <div class="col-xl-4 col-lg-3">
+                <h6 class="mb-2">
+                  <a href="#social-links" class="d-block text-dark dropdown-toggle d-lg-none py-2" data-bs-toggle="collapse">Socials</a>
+                </h6>
+                <div id="social-links" class="collapse d-lg-block" data-bs-parent="#footer-links">
+                  <ul class="nav flex-column mb-2 mb-lg-0">
+                    <li class="nav-item"><a href="#" class="nav-link d-inline-block px-0 pt-1 pb-2">Telegram</a></li>
+                    <li class="nav-item"><a href="#" class="nav-link d-inline-block px-0 pt-1 pb-2">Discord</a></li>
+                    <li class="nav-item"><a href="#" class="nav-link d-inline-block px-0 pt-1 pb-2">Twitter</a></li>
+                  </ul>
+                </div>
+              </div>
+              <div class="col-xl-4 col-lg-5 pt-2 pt-lg-0">
+                <h6 class="mb-2">Contact Us</h6>
+ 				<ul class="list-unstyled mb-0 px-4 px-lg-0">
+                  <li class="d-flex align-items-center pb-1 mb-2">
+                    <i class="bx bx-map fs-xl text-primary me-2"></i>
+                    Wilton Street, London, EC4 6HQ
+                  </li>
+                  <li class="d-flex align-items-center pb-1 mb-2">
+                    <i class="bx bx-envelope fs-xl text-primary me-2"></i>
+                    <a href="mailto:contact@quartzadvisors.com" class="fw-medium p-0">contact@quartzadvisors.com</a>
+                  </li>
+                  <li class="d-flex align-items-center pb-1 mb-2">
+                    <i class="bx bx-phone-call fs-xl text-primary me-2"></i>
+                    <a href="tel:4065550120" class="nav-link fw-normal p-0">+40 783 982 112</a>
+                  </li>
+               </ul>
+              </div>
+			  
+			  
+            </div>
+			
+			<form class="needs-validation" novalidate>
+              <label for="subscr-email" class="form-label">Subscribe to our newsletter</label>
+              <div class="input-group">
+                <input type="email" id="subscr-email" class="form-control rounded-start ps-5" placeholder="Your email" required>
+                <i class="bx bx-envelope fs-lg text-muted position-absolute top-50 start-0 translate-middle-y ms-3 zindex-5"></i>
+                <div class="invalid-tooltip position-absolute top-100 start-0">Please provide a valid email address.</div>
+                <button type="submit" class="btn btn-primary">Subscribe</button>
+              </div>
+            </form>
+          </div>
+        </div>
+        
+      </div>
+    </footer>
+
+
+    <!-- Back to top button -->
+    <a href="#top" class="btn-scroll-top" data-scroll>
+      <span class="btn-scroll-top-tooltip text-muted fs-sm me-2">Top</span>
+      <i class="btn-scroll-top-icon bx bx-chevron-up"></i>
+    </a>
+
+
+    <!-- Vendor Scripts -->
+    <script src="assets/vendor/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="assets/vendor/smooth-scroll/dist/smooth-scroll.polyfills.min.js"></script>
+    <script src="assets/vendor/jarallax/dist/jarallax.min.js"></script>
+    <script src="assets/vendor/@lottiefiles/lottie-player/dist/lottie-player.js"></script>
+    <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
+    <script src="assets/vendor/cleave.js/dist/cleave.min.js"></script>
+
+    <!-- Main Theme Script -->
+    <script src="assets/js/theme.min.js"></script>
+  </body>
+</html>
