@@ -7729,6 +7729,10 @@ textarea.form-control-lg {
   color: #6366f1 !important;
 }
 
+.text-orange {
+  color: #f35a1a !important;
+}
+
 .text-secondary {
   color: #eff2fc !important;
 }
@@ -13767,7 +13771,7 @@ hr.dropdown-divider {
 .card-hover-primary .text-muted,
 .card-hover-primary .text-dark,
 .card-hover-primary .text-nav,
-.card-hover-primary .text-primary,
+.card-hover-primary .text-primary, text-orange,
 .card-hover-primary h1, .card-hover-primary .h1, .card-hover-primary h2, .card-hover-primary .h2, .card-hover-primary h3, .card-hover-primary .h3,
 .card-hover-primary h4, .card-hover-primary .h4, .card-hover-primary h5, .card-hover-primary .h5, .card-hover-primary h6, .card-hover-primary .h6 {
   transition: color 0.2s ease-in-out;
@@ -13793,6 +13797,10 @@ hr.dropdown-divider {
   color: rgba(255, 255, 255, 0.5) !important;
 }
 .card-hover-primary:hover .text-primary {
+  color: #fff !important;
+}
+
+.card-hover-primary:hover .text-orange {
   color: #fff !important;
 }
 .card-hover-primary:hover .border-top, .card-hover-primary:hover .border-end,
